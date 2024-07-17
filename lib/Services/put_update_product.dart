@@ -10,6 +10,7 @@ class UpdateProductServices {
     required String category,
     required int id,
   }) async {
+    // ignore: avoid_print
     print('Product id = $id');
     // ignore: missing_required_param
     Map<String, dynamic> data = await Api().put(

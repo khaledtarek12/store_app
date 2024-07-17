@@ -18,6 +18,7 @@ class ShoppingPage extends StatelessWidget {
       child: FutureBuilder(
         future: GetAllProductServices().getAllProducts(),
         builder: (context, snapshot) {
+          // ignore: avoid_print
           print((snapshot.error));
           if (snapshot.hasData) {
             List<ProductModel> product = snapshot.data!;

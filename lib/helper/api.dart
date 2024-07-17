@@ -68,8 +68,8 @@ class Api {
         'Authorization': 'Bearer $token',
       });
     }
+    // ignore: avoid_print
     print('url = $url body = $body token = $token');
-    print('Succes');
 
     // ignore: unused_local_variable
     http.Response response = await http.post(
@@ -80,7 +80,6 @@ class Api {
 
     if (response.statusCode == 200) {
       Map<String, dynamic> data = jsonDecode(response.body);
-      print(data);
       return data;
     } else {
       throw Exception(
